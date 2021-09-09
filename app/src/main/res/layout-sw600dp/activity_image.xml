@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/AppColor"
+    tools:context="com.ebm.iwasframed.Mat_Borders.ImageActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/toolbar"
+        android:background="@color/ActionBarColor">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ActionBarColor">
+
+
+            <Button
+                android:id="@+id/btnDone"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:text="Done"
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/white"
+                android:background="@color/ButtonColor"
+                android:layout_alignParentLeft="true"
+                android:textSize="15sp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UPLOAD IMAGE"
+                android:textColor="@android:color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:textSize="25sp"/>
+
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Save Custom"
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/white"
+                android:background="@color/ButtonColor"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/lowerLayout"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/frameLayout">
+
+        <com.ebm.iwasframed.Frames.FinalFrame
+            android:id="@+id/imgFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"
+
+            />
+
+    </FrameLayout>
+
+
+
+  <LinearLayout
+      android:layout_alignParentBottom="true"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/lowerLayout"
+      android:gravity="center|bottom"
+      android:orientation="vertical">
+
+
+      <Button
+          android:id="@+id/btnuploadimage"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:layout_marginTop="10dp"
+          android:layout_marginRight="30dp"
+          android:layout_marginLeft="30dp"
+          android:layout_marginBottom="20dp"
+          android:background="@color/ButtonColor"
+          android:textColor="@color/white"
+          android:textSize="25sp"
+          android:layout_gravity="center_horizontal|center"
+          android:text="UPLOAD IMAGE" />
+  </LinearLayout>
+
+</RelativeLayout>

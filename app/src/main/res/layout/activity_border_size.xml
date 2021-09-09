@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppColor"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.ebm.iwasframed.Frame_Size.BorderSizeActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/ActionBarColor">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.5"
+                android:background="@color/ButtonColor"
+                android:text="Back"
+                android:textColor="@android:color/white"
+                android:textSize="8sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:text="SET BORDER SIZE"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnCreate"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@color/ButtonColor"
+                android:text="Create"
+                android:textColor="@android:color/white"
+                android:textSize="8sp" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingTop="2dp"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="WIDTH" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="HEIGHT" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@+id/txtX"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext">
+
+                <EditText
+                    android:id="@+id/edtWidthTop"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="Top"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:paddingLeft="3dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="9sp"
+                    android:textStyle="bold"></EditText>
+
+                <Spinner
+                    android:id="@+id/spWidthTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/edtWidthTop"
+                    android:background="@drawable/spinner_without_arrow"
+                    android:entries="@array/frames" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/custom_edittext">
+
+                <EditText
+                    android:id="@+id/edtWidthBottom"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Bottom"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:paddingLeft="3dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="9sp"
+                    android:textStyle="bold"></EditText>
+
+                <Spinner
+                    android:id="@+id/spWidthBottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/edtWidthBottom"
+                    android:background="@drawable/spinner_without_arrow"
+                    android:entries="@array/frames" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txtX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="X"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:id="@+id/LayoutHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/txtX"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext">
+
+                <EditText
+                    android:id="@+id/edtHeightLeft"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="Left"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:paddingLeft="3dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="9sp"
+                    android:textStyle="bold"></EditText>
+
+                <Spinner
+                    android:id="@+id/spHeightLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/edtHeightLeft"
+                    android:background="@drawable/spinner_without_arrow"
+                    android:entries="@array/frames" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext">
+
+                <EditText
+                    android:id="@+id/edtHeightRight"
+                    android:layout_width="35dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Right"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:paddingLeft="3dp"
+                    android:textCursorDrawable="@null"
+                    android:textSize="9sp"
+                    android:textStyle="bold"></EditText>
+
+                <Spinner
+                    android:id="@+id/spHeightRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/edtHeightRight"
+                    android:background="@drawable/spinner_without_arrow"
+                    android:entries="@array/frames" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <com.ebm.iwasframed.Frames.NewFrame
+        android:id="@+id/customFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

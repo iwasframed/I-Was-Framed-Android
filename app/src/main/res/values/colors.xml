@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="colorPrimary">#3F51B5</color>
+<color name="colorPrimaryDark">#303F9F</color>
+<color name="colorAccent">#FF4081</color>
+<color name="AppColor">#f2e6ce</color>
+<color name="ButtonColor">#1b1812</color>
+<color name="ActionBarColor">#594f3b</color>
+<color name="EditTextFilledColor">#d9cab0</color>
+<color name="ButtonNewColor">#a6977b</color>
+<color name="gold">#FFD700</color>
+<color name="black">#000000</color>
+<color name="silver">#C0C0C0</color>
+<color name="wood"> #663300</color>
+    <color name="frame">#3b2108</color>
+    <color name="frame1">#af5c0c</color>
+
+
+    <color name="white">#ffffff</color>
+    </resources>

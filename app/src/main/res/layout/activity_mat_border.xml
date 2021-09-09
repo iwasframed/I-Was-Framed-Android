@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/AppColor"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/toolbar"
+        android:background="@color/ActionBarColor">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="3"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDone"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.5"
+                android:background="@color/ButtonColor"
+                android:text="Done"
+                android:textColor="@android:color/white"
+                android:textSize="8sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="RESULTS"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="30dp"
+                android:text="Customize"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/white"
+                android:background="@color/ButtonColor"
+
+                android:textSize="8sp"/>
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/decimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/decimalFraction"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="DECIMAL"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"/>
+
+        <Switch
+            android:layout_gravity="center"
+            android:enabled="true"
+            android:id="@+id/btnDecimalfraction"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:theme="@style/SCBSwitch"
+
+            />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/decimal"
+        android:layout_above="@+id/btnSave"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="410dp">
+
+                <com.ebm.iwasframed.Frames.TopMatFrame
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imgFrame"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:textColor="@color/black"
+                android:text="TOP MAT"
+                android:paddingBottom="20dp"
+                android:textSize="20sp"/>
+
+
+            <FrameLayout
+                android:id="@+id/thirdFrame"
+                android:layout_width="match_parent"
+                android:layout_height="410dp">
+
+                <com.ebm.iwasframed.Frames.MiddleMatFrame
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tripleFrame"/>
+
+
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txtThird"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:textColor="@color/black"
+                android:text="MIDDLE MAT"
+                android:paddingBottom="20dp"
+                android:textSize="20sp"/>
+
+
+            <FrameLayout
+                android:id="@+id/secondFrame"
+                android:layout_width="match_parent"
+                android:layout_height="410dp">
+
+                <com.ebm.iwasframed.Frames.BottomMatFrame
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/doubleFrame"/>
+
+
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txtBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:textColor="@color/black"
+                android:text="BOTTOM MAT"
+                android:paddingBottom="20dp"
+                android:textSize="20sp"/>
+
+
+
+
+    </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_margin="5dp"
+        android:layout_alignParentBottom="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="0dp">
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

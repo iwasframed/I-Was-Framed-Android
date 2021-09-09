@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/AppColor"
+    tools:context="com.ebm.iwasframed.Mat_Borders.MatActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/header">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/toolbar"
+            android:background="@color/ActionBarColor">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnsetSize"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="30dp"
+                    android:text="Set Size"
+                    android:layout_centerVertical="true"
+                    android:textColor="@android:color/white"
+                    android:background="@color/ButtonColor"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="8sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="SET IMAGE SIZE"
+                    android:textColor="@android:color/white"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="30dp"
+                    android:text="Next"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@android:color/white"
+                    android:background="@color/ButtonColor"
+
+                    android:textSize="8sp"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="WIDTH:"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HEIGHT:"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MAT OVERLAP:"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"/>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:weightSum="3"
+            android:id="@+id/midlayout"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/txtX"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/custom_edittext">
+
+                <EditText
+                    android:id="@+id/edtWidth"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textSize="14sp"
+                    android:paddingLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textCursorDrawable="@null"
+                    android:inputType="number">
+                </EditText>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/ActionBarColor"/>
+
+                <Spinner
+                    android:id="@+id/widthSpinner"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:entries="@array/frames"
+                    android:textSize="10sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/LayoutHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_toRightOf="@+id/txtX"
+                android:weightSum="2"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/custom_edittext">
+
+
+                <EditText
+                    android:id="@+id/edtHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textSize="14sp"
+                    android:paddingLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textCursorDrawable="@null"
+                    android:inputType="number">
+                </EditText>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/ActionBarColor"/>
+
+                <Spinner
+                    android:id="@+id/heightSpinner"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:entries="@array/frames"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp">
+
+                <Spinner
+                    android:layout_weight="1"
+                    android:id="@+id/edtOverlap"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textSize="10sp"
+                    android:background="@drawable/spinner_background"
+                    ></Spinner>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:id="@+id/frame"
+            android:layout_above="@+id/lowerLayout">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/frameLayout">
+                <com.ebm.iwasframed.Frames.TopMatFrame
+                    android:id="@+id/imgFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/imgView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+
+                    />
+</FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+   <!--
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lowerLayout"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/btnuploadimage"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+
+            android:background="@color/ButtonColor"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal|center"
+            android:text="UPLOAD IMAGE" />
+    </LinearLayout>
+-->
+
+</RelativeLayout>

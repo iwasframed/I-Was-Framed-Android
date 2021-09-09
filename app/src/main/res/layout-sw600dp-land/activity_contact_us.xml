@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/AppColor"
+    tools:context="com.ebm.iwasframed.ContactUs">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/AppColor">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/toolbar"
+        android:background="@color/ActionBarColor">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ActionBarColor">
+
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Back"
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/white"
+                android:background="@color/ButtonColor"
+                android:layout_alignParentLeft="true"
+                android:textSize="16sp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONTACT US"
+                android:textColor="@android:color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:textSize="25sp"/>
+
+
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logo"
+        android:padding="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp">
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:layout_toLeftOf="@+id/txtX"
+            android:textSize="24sp"
+            android:text="FIRST NAME"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"/>
+
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txtX"
+            android:text="LASTNAME"
+            android:layout_marginLeft="10dp"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/edtFname"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="10dp"
+            android:layout_toLeftOf="@+id/txtX"
+            android:textCursorDrawable="@null"
+            android:textSize="18sp"
+            android:hint="TYPE HERE"
+            android:layout_weight="1"
+            android:background="@drawable/custom_edittext"
+            android:layout_marginRight="10dp">
+
+        </EditText>
+
+
+
+
+        <EditText
+            android:id="@+id/edtLname"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/txtX"
+            android:textCursorDrawable="@null"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:hint="TYPE HERE"
+            android:paddingLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_edittext"
+            android:layout_alignParentRight="true">
+
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:paddingTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:layout_toLeftOf="@+id/txtX"
+            android:textSize="24sp"
+            android:text="EMAIL ADDRESS"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:layout_marginRight="10dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="10dp"
+            android:layout_toLeftOf="@+id/txtX"
+            android:textSize="18sp"
+            android:inputType="textEmailAddress"
+            android:textCursorDrawable="@null"
+            android:hint="TYPE HERE"
+            android:layout_weight="1"
+            android:background="@drawable/custom_edittext"
+            android:layout_marginRight="0dp"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:layout_toLeftOf="@+id/txtX"
+            android:textSize="24sp"
+            android:text="PHONE NUMBER"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/edtPhone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="10dp"
+            android:layout_toLeftOf="@+id/txtX"
+            android:textSize="18sp"
+            android:inputType="number"
+            android:hint="TYPE HERE"
+            android:layout_weight="1"
+            android:textCursorDrawable="@null"
+            android:background="@drawable/custom_edittext"
+            android:layout_marginRight="0dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:paddingTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:layout_toLeftOf="@+id/txtX"
+            android:textSize="24sp"
+            android:text="MESSAGE"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/edtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:layout_toLeftOf="@+id/txtX"
+            android:textSize="18sp"
+            android:inputType="textMultiLine"
+            android:textCursorDrawable="@null"
+            android:hint="TYPE HERE"
+            android:gravity="left"
+            android:lines="4"
+            android:minLines="4"
+            android:layout_weight="1"
+            android:background="@drawable/custom_edittext"
+            android:layout_marginRight="0dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_above="@+id/bottomLayout"
+            android:background="@color/ButtonColor"
+            android:text="SUBMIT NOW"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>
